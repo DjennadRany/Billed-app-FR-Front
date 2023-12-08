@@ -19,8 +19,20 @@ const row = (bill) => {
 }
 
 const rows = (data) => {
-  return (data && data.length) ? data.map(bill => row(bill)).join("") : "";
+  // If the code is executed with data
+  if (data !== undefined) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+    // Sort data by date
+    data.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    // Map the sorted data to HTML rows
+    return data.map(bill => row(bill)).join("");
+  }
+
+  return "";
 }
+
 
 export default ({ data: bills, loading, error }) => {
   
@@ -47,6 +59,8 @@ export default ({ data: bills, loading, error }) => {
     return ErrorPage(error);
   }
   
+
+
   return (`
     <div class='layout'>
       ${VerticalLayout(120)}
