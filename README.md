@@ -1,3 +1,4 @@
+[![Coverage Status](https://img.shields.io/badge/Coverage-93.21%25-brightgreen)]
 
 ## L'architecture du projet :
 Ce projet, dit frontend, est connecté à un service API backend que vous devez aussi lancer en local.
