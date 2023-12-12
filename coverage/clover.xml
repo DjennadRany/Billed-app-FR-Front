@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702409747740" clover="3.2.0">
-  <project timestamp="1702409747740" name="All files">
-    <metrics statements="221" coveredstatements="201" conditionals="88" coveredconditionals="73" methods="70" coveredmethods="55" elements="379" coveredelements="329" complexity="0" loc="221" ncloc="221" packages="3" files="16" classes="16"/>
+<coverage generated="1702411537811" clover="3.2.0">
+  <project timestamp="1702411537812" name="All files">
+    <metrics statements="221" coveredstatements="206" conditionals="88" coveredconditionals="73" methods="70" coveredmethods="58" elements="379" coveredelements="337" complexity="0" loc="221" ncloc="221" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="routes.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\constants\routes.js">
         <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
         <line num="6" count="6" type="stmt"/>
         <line num="13" count="6" type="stmt"/>
-        <line num="14" count="38" type="cond" truecount="5" falsecount="0"/>
-        <line num="16" count="10" type="stmt"/>
-        <line num="18" count="10" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
+        <line num="14" count="52" type="cond" truecount="5" falsecount="0"/>
+        <line num="16" count="13" type="stmt"/>
+        <line num="18" count="17" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
         <line num="22" count="12" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
       </file>
@@ -20,32 +20,32 @@
       </file>
     </package>
     <package name="containers">
-      <metrics statements="181" coveredstatements="161" conditionals="55" coveredconditionals="40" methods="54" coveredmethods="39"/>
+      <metrics statements="181" coveredstatements="166" conditionals="55" coveredconditionals="40" methods="54" coveredmethods="42"/>
       <file name="Bills.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\containers\Bills.js">
-        <metrics statements="23" coveredstatements="18" conditionals="6" coveredconditionals="4" methods="9" coveredmethods="6"/>
-        <line num="7" count="11" type="stmt"/>
-        <line num="8" count="11" type="stmt"/>
-        <line num="9" count="11" type="stmt"/>
-        <line num="10" count="11" type="stmt"/>
-        <line num="11" count="11" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="11" type="stmt"/>
-        <line num="13" count="11" type="cond" truecount="1" falsecount="1"/>
-        <line num="14" count="20" type="stmt"/>
-        <line num="16" count="11" type="stmt"/>
-        <line num="19" count="11" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="23" count="11" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="11" type="stmt"/>
-        <line num="31" count="6" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="6" type="stmt"/>
-        <line num="36" count="20" type="stmt"/>
-        <line num="42" count="15" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
-        <line num="45" count="5" type="stmt"/>
+        <metrics statements="23" coveredstatements="23" conditionals="6" coveredconditionals="4" methods="9" coveredmethods="9"/>
+        <line num="7" count="18" type="stmt"/>
+        <line num="8" count="18" type="stmt"/>
+        <line num="9" count="18" type="stmt"/>
+        <line num="10" count="18" type="stmt"/>
+        <line num="11" count="18" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="18" type="stmt"/>
+        <line num="13" count="18" type="cond" truecount="1" falsecount="1"/>
+        <line num="14" count="40" type="stmt"/>
+        <line num="16" count="18" type="stmt"/>
+        <line num="19" count="18" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="23" count="18" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="30" count="18" type="stmt"/>
+        <line num="31" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="11" type="stmt"/>
+        <line num="36" count="24" type="stmt"/>
+        <line num="42" count="18" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
+        <line num="45" count="6" type="stmt"/>
       </file>
       <file name="Dashboard.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\containers\Dashboard.js">
         <metrics statements="72" coveredstatements="69" conditionals="41" coveredconditionals="33" methods="24" coveredmethods="19"/>
@@ -168,28 +168,28 @@
       </file>
       <file name="Logout.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\containers\Logout.js">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="5" count="33" type="stmt"/>
-        <line num="6" count="33" type="stmt"/>
-        <line num="7" count="33" type="stmt"/>
-        <line num="8" count="33" type="stmt"/>
-        <line num="11" count="33" type="stmt"/>
+        <line num="5" count="43" type="stmt"/>
+        <line num="6" count="43" type="stmt"/>
+        <line num="7" count="43" type="stmt"/>
+        <line num="8" count="43" type="stmt"/>
+        <line num="11" count="43" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
       </file>
       <file name="NewBill.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\containers\NewBill.js">
         <metrics statements="38" coveredstatements="37" conditionals="4" coveredconditionals="3" methods="8" coveredmethods="7"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
-        <line num="17" count="7" type="stmt"/>
-        <line num="18" count="7" type="stmt"/>
-        <line num="20" count="7" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="10" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
         <line num="21" count="2" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
@@ -204,14 +204,14 @@
         <line num="41" count="1" type="stmt"/>
         <line num="42" count="1" type="stmt"/>
         <line num="43" count="1" type="stmt"/>
-        <line num="45" count="7" type="stmt"/>
+        <line num="45" count="10" type="stmt"/>
         <line num="46" count="2" type="stmt"/>
         <line num="47" count="2" type="stmt"/>
         <line num="48" count="2" type="stmt"/>
         <line num="49" count="2" type="stmt"/>
         <line num="62" count="2" type="stmt"/>
         <line num="63" count="2" type="stmt"/>
-        <line num="67" count="7" type="stmt"/>
+        <line num="67" count="10" type="stmt"/>
         <line num="68" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="69" count="2" type="stmt"/>
         <line num="73" count="2" type="stmt"/>
@@ -222,24 +222,24 @@
       <metrics statements="32" coveredstatements="32" conditionals="28" coveredconditionals="28" methods="15" coveredmethods="15"/>
       <file name="Actions.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\Actions.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="26" type="stmt"/>
+        <line num="5" count="38" type="stmt"/>
       </file>
       <file name="BillsUI.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\BillsUI.js">
         <metrics statements="14" coveredstatements="14" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
         <line num="6" count="6" type="stmt"/>
-        <line num="7" count="24" type="stmt"/>
+        <line num="7" count="36" type="stmt"/>
         <line num="21" count="6" type="stmt"/>
-        <line num="23" count="9" type="cond" truecount="2" falsecount="0"/>
-        <line num="24" count="7" type="stmt"/>
-        <line num="27" count="21" type="stmt"/>
-        <line num="30" count="24" type="stmt"/>
+        <line num="23" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="10" type="stmt"/>
+        <line num="27" count="30" type="stmt"/>
+        <line num="30" count="36" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
-        <line num="39" count="16" type="stmt"/>
-        <line num="56" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="57" count="6" type="stmt"/>
-        <line num="58" count="10" type="cond" truecount="2" falsecount="0"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="64" count="9" type="stmt"/>
+        <line num="39" count="26" type="stmt"/>
+        <line num="56" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="57" count="10" type="stmt"/>
+        <line num="58" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="64" count="12" type="stmt"/>
       </file>
       <file name="DashboardFormUI.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\DashboardFormUI.js">
         <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
@@ -256,28 +256,28 @@
       </file>
       <file name="ErrorPage.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\ErrorPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="4" count="8" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
       </file>
       <file name="LoadingPage.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\LoadingPage.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="13" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
       </file>
       <file name="LoginUI.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\LoginUI.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="4" count="17" type="stmt"/>
+        <line num="4" count="20" type="stmt"/>
       </file>
       <file name="NewBillUI.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\NewBillUI.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="5" count="8" type="stmt"/>
+        <line num="5" count="12" type="stmt"/>
       </file>
       <file name="VerticalLayout.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\views\VerticalLayout.js">
         <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="7" count="51" type="stmt"/>
-        <line num="8" count="51" type="cond" truecount="2" falsecount="0"/>
-        <line num="9" count="38" type="stmt"/>
-        <line num="11" count="51" type="cond" truecount="4" falsecount="0"/>
-        <line num="12" count="22" type="stmt"/>
-        <line num="29" count="29" type="stmt"/>
+        <line num="7" count="67" type="stmt"/>
+        <line num="8" count="67" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="53" type="stmt"/>
+        <line num="11" count="67" type="cond" truecount="4" falsecount="0"/>
+        <line num="12" count="37" type="stmt"/>
+        <line num="29" count="30" type="stmt"/>
       </file>
     </package>
   </project>
