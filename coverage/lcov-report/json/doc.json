@@ -1,0 +1,141 @@
+{
+    "Sommaire": {
+        "Introduction": {
+            "ContexteMission": "Départ imprévu de Garance, remplacement en urgence. Fonctionnalité 'note de frais' très attendue, lancement dans deux semaines. Deux parcours utilisateurs : Employé et Administrateur RH.",
+            "ObjectifsAtteindre": [
+                "Correction des bugs identifiés.",
+                "Ajout de tests unitaires et d'intégration.",
+                "Rédaction d'un plan de test End-to-End pour le parcours employé."
+            ],
+            "DetailsParcoursUtilisateurs": {
+                "BackEnd": "Parcours employé prêt en version alpha, à tester et débugger.",
+                "FrontEnd": "Parcours administrateur testé, parcours employé à tester et débugger."
+            }
+        },
+        "RapportBugs": [{
+                "Type": "BugReport",
+                "Titre": "[Bug report] - Bills",
+                "Description": "La fonction de paiement des factures (Bills) ne fonctionne pas correctement après la dernière mise à jour. Lorsque l'utilisateur essaie de payer une facture, aucun montant n'est déduit de son compte.",
+                "ToDo": "Investiguer et corriger le problème de la fonction de paiement des factures.",
+                "RapportTest": "Le problème a été reproduit en utilisant différentes configurations. Aucune erreur n'est signalée dans la console.",
+                "CaptureImage": "<Capture01>",
+                "SolutionDescription": "Le problème était lié à une erreur de logique dans la fonction de paiement des factures. Le montant n'était pas correctement déduit du solde de l'utilisateur. La solution consistait à ajuster la logique de déduction du montant."
+
+            },
+            {
+                "Type": "BugReport",
+                "Titre": "[Bug report] - Login",
+                "Description": "Le système de connexion (Login) présente des défaillances intermittentes. Certains utilisateurs ont signalé qu'ils ne pouvaient pas se connecter avec leurs identifiants habituels.",
+                "ToDo": "Examiner les journaux d'erreurs et identifier la cause des échecs intermittents de connexion.",
+                "RapportTest": "Des erreurs 500 ont été enregistrées lors des échecs de connexion. Les journaux montrent une augmentation soudaine du trafic au moment des incidents.",
+                "CaptureImage": "<Capture02>",
+                "SolutionDescription": "Les erreurs 500 pendant les échecs de connexion indiquaient une surcharge soudaine du serveur. La solution consistait à mettre en place une gestion améliorée du trafic et à optimiser les performances du système de connexion."
+
+            },
+            {
+                "Type": "BugHunt",
+                "Titre": "[Bug Hunt] - Bills",
+                "Description": "Effectuer une chasse aux bugs approfondie dans la fonctionnalité de paiement des factures (Bills) pour identifier et corriger tout problème non signalé.",
+                "ToDo": "Explorer différents scénarios d'utilisation et rechercher des erreurs potentielles.",
+                "SolutionDescription": "La chasse aux bugs a révélé plusieurs problèmes mineurs liés à des cas d'utilisation spécifiques. Chaque problème a été identifié et corrigé individuellement, assurant ainsi une meilleure stabilité de la fonctionnalité de paiement des factures."
+
+            },
+            {
+                "Type": "BugHunt",
+                "Titre": "[Bug Hunt] - Dashboard",
+                "Description": "Effectuer une chasse aux bugs approfondie dans le tableau de bord (Dashboard) pour identifier et corriger tout problème non signalé.",
+                "ToDo": "Explorer différents scénarios d'utilisation et rechercher des erreurs potentielles.",
+                "SolutionDescription": "La chasse aux bugs a permis de découvrir des problèmes liés à la mise à jour en temps réel du tableau de bord. La solution a consisté à mettre en œuvre une gestion plus robuste des mises à jour pour assurer l'exactitude des données affichées."
+            }
+        ],
+
+        "AjoutTestsUnitairesEtIntegration": [{
+                "Composant": "views/Bills",
+                "TauxCouverture": "Le taux de couverture est à 100%, mais un test manque la mention 'expect'.",
+                "CaptureImage": "<Capture03>"
+            },
+            {
+                "Composant": "views/NewBill",
+                "CaptureImage": "<Capture04>"
+            },
+            {
+                "Composant": "container/Bills",
+                "TauxCouverture": "Couverture minimale de 80% pour le fichier container/Bills.",
+                "AjoutTestIntegration": "Ajout d'un test d'intégration GET Bills.",
+                "CaptureImage": "<Capture05>"
+            },
+            {
+                "Composant": "container/NewBill",
+                "TauxCouverture": "Couverture minimale de 80% pour le fichier container/NewBill.",
+                "AjoutTestIntegration": "Ajout d'un test d'intégration POST new bill.",
+                "CaptureImage": "<Capture06>"
+            },
+            {
+                "Composant": "views/VerticalLayout",
+                "Description": "Respecter la structure des tests unitaires existants.",
+                "CaptureImage": "<Capture07>"
+            }
+        ],
+        "TestEndToEndEmploye": {
+            "Plan": "<PlanTestE2E>",
+            "InspirationPlanAdmin": "<InspirationPlanAdmin>"
+        },
+        "Livraisons": [{
+                "Type": "FichierTXT",
+                "Description": "Lien vers le code mis à jour sur un repo GitHub public."
+            },
+            {
+                "Type": "CaptureEcran",
+                "Description": "Rapport de tests Jest sur les fichiers UI et UX.",
+                "CaptureImage": "<Capture08>"
+            },
+            {
+                "Type": "CaptureEcran",
+                "Description": "Rapport de couverture Jest.",
+                "CaptureImage": "<Capture09>"
+            },
+            {
+                "Type": "DocumentPDF",
+                "Description": "Plan de tests End-to-End pour le parcours employé."
+            }
+        ],
+        "Soutenance": {
+            "Duree": "30 minutes",
+            "Presentation": [
+                "Présentation des livrables, explications des corrections et des tests.",
+                "Discussion sur la compréhension des bugs et des choix de tests.",
+                "Débriefing final."
+            ]
+        },
+        "CompetencesEvaluees": [
+            "Écrire des tests unitaires avec JavaScript.",
+            "Rédiger un plan de test End-to-End manuel.",
+            "Débugger une application web avec le Chrome Debugger.",
+            "Écrire des tests d'intégration avec JavaScript."
+        ],
+        "MiseEnPlaceFonctionnalite": "<DescriptionPratique>",
+        "EquipeEtMissions": "<EquipeMissions>",
+        "Taches": [{
+                "Numero": 1,
+                "Description": "[Bug - report] Fixer les bugs identifiés dans le rapport de bug fourni par Jest. Utiliser Chrome Debugger.",
+                "Contraintes": "<Contraintes1>"
+            },
+            {
+                "Numero": 2,
+                "Description": "[Bug - hunt] Fixer les bugs identifiés par Leila sur le parcours employé. Utiliser Chrome Debugger.",
+                "Contraintes": "<Contraintes2>"
+            },
+            {
+                "Numero": 3,
+                "Description": "[Tests unitaires et d'intégration] Ajouter des tests unitaires et d'intégration pour les fichiers Bills et NewBill. Assurer un taux de couverture global des containers de 80% minimum.",
+                "Conseils": "<Conseils3>"
+            },
+            {
+                "Numero": 4,
+                "Description": "[Test End-to-End] Rédiger un plan de test End-to-End (E2E) sur le parcours employé pour guider Leïla. S'inspirer du plan E2E que Garance a déjà rédigé sur le parcours administrateur RH.",
+                "AutresInformations": "<AutresInformations4>"
+            }
+        ],
+        "PlanTestEndToEndAdmin": "<PlanTestEndToEndAdmin>"
+    }
+}

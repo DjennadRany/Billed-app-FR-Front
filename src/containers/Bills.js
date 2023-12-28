@@ -22,10 +22,18 @@ export default class {
 
   handleClickIconEye = (icon) => {
     const billUrl = icon.getAttribute("data-bill-url");
-    const imgWidth = Math.floor($('#modaleFile').width() * 0.5);
-    $('#modaleFile').find(".modal-body").html(`<div style='text-align: center;' class="bill-proof-container"><img width=${imgWidth} src=${billUrl} alt="Bill" /></div>`);
-    $('#modaleFile').modal('show');
-  }
+    console.log('billUrl:', billUrl);
+  
+    // Vérifier si l'URL de la facture est valide
+    if (billUrl && billUrl !== "null") {
+      const imgWidth = Math.floor($('#modaleFile').width() * 0.5);
+      $('#modaleFile').find(".modal-body").html(`<div style='text-align: center;' class="bill-proof-container"><img width=${imgWidth} src=${billUrl} alt="Bill" /></div>`);
+      $('#modaleFile').modal('show');
+    } else {
+      alert("L'URL de la facture n'est pas valide.");
+    }
+  };
+  
 
   getBills = () => {
     if (this.store) {
@@ -35,17 +43,18 @@ export default class {
         .then(snapshot => {
           const bills = snapshot.map(doc => ({
             ...doc,
-            date: formatDate(doc.date), // Assurez-vous que formatDate produit le format "AAAA-MM-JJ"
+            date: formatDate(doc.date),
             status: formatStatus(doc.status),
           }));
   
           bills.sort((a, b) => new Date(a.date) - new Date(b.date));
   
-          console.log('length', bills.length);
+          console.log("Bills with URLs:", bills);
           return bills;
         });
     }
   };
+  
   
   
 }

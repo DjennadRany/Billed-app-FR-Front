@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projet JSON</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1 class="mb-4">Projet JSON</h1>
+ 
+  <div class="row">
+    <div class="col-md-3">
+      <div class="list-group" id="categories"></div>
+    </div>
+<span></span>
+    <div class="col-md-9">
+      <div id="content"></div>
+    </div>
+  </div>
+  
+ 
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+    let showContent; // Define showContent globally
+  
+    $(document).ready(function () {
+      let content = $('#content');
+      let data;
+  
+      // Function to show content for a category
+      showContent = function (category) {
+        let categoryData = data.Sommaire[category];
+        content.html('');
+  
+        // Check if it's an object (based on your JSON structure)
+        if (typeof categoryData === 'object') {
+          for (let key in categoryData) {
+            if (Array.isArray(categoryData[key])) {
+              // Handle arrays (e.g., "ObjectifsAtteindre")
+              content.append(`<h2>${key}</h2>`);
+              content.append('<ul>');
+              categoryData[key].forEach(item => {
+                content.append(`<li>${item}</li>`);
+              });
+              content.append('</ul>');
+            } else if (typeof categoryData[key] === 'object') {
+              // Handle nested objects (e.g., "DetailsParcoursUtilisateurs")
+              content.append(`<h2>${key}</h2>`);
+              content.append('<table>');
+              for (let nestedKey in categoryData[key]) {
+                content.append(`<tr><td>${nestedKey}</td><td>${categoryData[key][nestedKey]}</td></tr>`);
+              }
+              content.append('</table>');
+            } else {
+              // Handle other data types
+              content.append(`<h3>${key}</h3>`);
+              content.append(`<p class="Okoo">${JSON.stringify(categoryData[key])}</p>`);
+            }
+          }
+        } else {
+          // Handle non-object data
+          content.append(`<p class="Okoo">${JSON.stringify(categoryData)}</p>`);
+        }
+      };
+  
+      // Function to populate categories
+      function populateCategories(categories) {
+        let categoriesList = $('#categories');
+        categories.forEach(function (category) {
+          categoriesList.append(`<a href="#" class="list-group-item list-group-item-action" onclick="showContent('${category}')">${category}</a>`);
+        });
+      }
+  
+      // Function to handle search
+      function handleSearchInput() {
+        $('#searchInput').on('input', function () {
+          let searchValue = $(this).val().toLowerCase();
+          let matchingCategories = Object.keys(data.Sommaire).filter(function (category) {
+            return category.toLowerCase().includes(searchValue);
+          });
+  
+          populateCategories(matchingCategories);
+        });
+      }
+  
+      // Function to initialize the page
+      function initializePage() {
+        $.getJSON('json/doc.json', function (jsonData) {
+          data = jsonData;
+          let categories = Object.keys(data.Sommaire);
+  
+          populateCategories(categories);
+  
+          // Display content for the first category
+          if (categories.length > 0) {
+            showContent(categories[0]);
+          }
+  
+          handleSearchInput();
+        });
+      }
+  
+      // Call the initialization function
+      initializePage();
+    });
+  </script>
+  
+  
+  
+
+
+
+
+
+
+</body>
+</html>
