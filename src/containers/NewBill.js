@@ -26,16 +26,7 @@ export default class NewBill {
     const email = JSON.parse(localStorage.getItem("user")).email
     formData.append('file', file)
     formData.append('email', email)
-   
-  
-    // Vérifier si le fichier n'est ni au format JPEG ni au format PDF
-    console.log(file.name)
-    if (!/\.(jpe?g)$/i.test(file.name)) {
-      alert("Veuillez sélectionner un fichier au format JPEG ");
-      // Réinitialiser la valeur du champ de fichier
-      fileInput.value = '';
-      return;
-    }
+
     this.store
       .bills()
       .create({
@@ -45,7 +36,7 @@ export default class NewBill {
         }
       })
       .then(({fileUrl, key}) => {
-
+        console.log(fileUrl)
         this.billId = key
         this.fileUrl = fileUrl
         this.fileName = fileName
