@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.77% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>30/31</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70% </span>
+                <span class="strong">66.67% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/10</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96.15% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/26</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
@@ -108,16 +108,7 @@
 <a name='L49'></a><a href='#L49'>49</a>
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
-<a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L52'></a><a href='#L52'>52</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,16 +133,8 @@
 <span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
@@ -170,7 +153,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,18 +183,10 @@ export default class {
 &nbsp;
   handleClickIconEye = (icon) =&gt; {
     const billUrl = icon.getAttribute("data-bill-url");
-    console.log('billUrl:', billUrl);
-  
-    // Vérifier si l'URL de la facture est valide
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (billUrl &amp;&amp; billUrl !== "null") {
-      const imgWidth = Math.floor($('#modaleFile').width() * 0.5);
-      $('#modaleFile').find(".modal-body").html(`&lt;div style='text-align: center;' class="bill-proof-container"&gt;&lt;img width=${imgWidth} src=${billUrl} alt="Bill" /&gt;&lt;/div&gt;`);
-      $('#modaleFile').modal('show');
-    } else {
-<span class="cstat-no" title="statement not covered" >      alert("L'URL de la facture n'est pas valide.");</span>
-    }
-  };
-  
+    const imgWidth = Math.floor($('#modaleFile').width() * 0.5);
+    $('#modaleFile').find(".modal-body").html(`&lt;div style='text-align: center;' class="bill-proof-container"&gt;&lt;img width=${imgWidth} src=${billUrl} alt="Bill" /&gt;&lt;/div&gt;`);
+    $('#modaleFile').modal('show');
+  }
 &nbsp;
   getBills = () =&gt; {
     <span class="missing-if-branch" title="else path not taken" >E</span>if (this.store) {
@@ -222,18 +196,17 @@ export default class {
         .then(snapshot =&gt; {
           const bills = snapshot.map(doc =&gt; ({
             ...doc,
-            date: formatDate(doc.date),
+            date: formatDate(doc.date), // Assurez-vous que formatDate produit le format "AAAA-MM-JJ"
             status: formatStatus(doc.status),
           }));
   
           bills.sort((a, b) =&gt; new Date(a.date) - new Date(b.date));
   
-          console.log("Bills with URLs:", bills);
+          console.log('length', bills.length);
           return bills;
         });
     }
   };
-  
   
   
 }
@@ -244,7 +217,7 @@ export default class {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Dec 29 2023 00:24:01 GMT+0100 (heure normale d’Europe centrale)
+                at Sat Jan 06 2024 15:59:57 GMT+0100 (heure normale d’Europe centrale)
             </div>
         </div>
         <script src="../prettify.js"></script>
