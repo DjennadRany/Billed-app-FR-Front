@@ -58,7 +58,7 @@ describe("Given I am connected as an employee", () => {
       // Define an event object
       const event = Object.assign(jest.fn(), {
         preventDefault: () => {},
-        target: { value: 'C:\\fakepath\\cmd.png' }
+        target: { value: 'C:\\fakepath\\cmd.jpg' }
       });
     
       // Call the handleChangeFile method
@@ -80,14 +80,14 @@ describe("Given I am connected as an employee", () => {
       }));
 
       // Define a file object with correct type
-      const fileElt = new File(['testfile'], 'testfile.png', {
-        type: 'image/png',
+      const fileElt = new File(['testfile'], 'testfile.jpg', {
+        type: 'image/jpg',
       });
 
       // Define an event object
       const event = Object.assign(jest.fn(), {
         preventDefault: () => {},
-        target: { value: 'C:\\fakepath\\cmd.png' }
+        target: { value: 'C:\\fakepath\\cmd.jpg' }
       });
 
       // Mock file input DOM element
