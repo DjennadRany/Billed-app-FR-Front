@@ -148,9 +148,9 @@ $('#btn-refuse-bill').off('click').on('click', (e) => this.handleRefuseSubmit(e,
       this.counter++;
     }
   
-    bills.forEach(bill => {
-      $(`#open-bill${bill.id}`).click((e) => this.handleEditTicket(e, bill, bills));
-    });
+   bills.forEach(bill => {
+    $(`#open-bill${bill.id}`).off('click').on('click', (e) => this.handleEditTicket(e, bill, bills));
+  });
   
     return bills;
   }
