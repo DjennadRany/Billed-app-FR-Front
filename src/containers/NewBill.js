@@ -23,8 +23,8 @@ export default class NewBill {
     const file = fileInput.files[0];
   
     // Vérifier si le fichier n'est pas au format JPEG
-    if (!/\.(jpe?g)$/i.test(file.name)) {
-      alert("Veuillez sélectionner un fichier au format JPEG.");
+    if (!/\.(jpe?g|png)$/i.test(file.name)) {
+      alert("Veuillez sélectionner un fichier au format JPEG ou PNG.");
       // Réinitialiser la valeur du champ de fichier
       fileInput.value = '';
       return;

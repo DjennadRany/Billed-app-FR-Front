@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1704624356905" clover="3.2.0">
-  <project timestamp="1704624356906" name="All files">
-    <metrics statements="231" coveredstatements="213" conditionals="86" coveredconditionals="71" methods="71" coveredmethods="58" elements="388" coveredelements="342" complexity="0" loc="231" ncloc="231" packages="3" files="16" classes="16"/>
+<coverage generated="1705218433366" clover="3.2.0">
+  <project timestamp="1705218433367" name="All files">
+    <metrics statements="230" coveredstatements="212" conditionals="86" coveredconditionals="71" methods="70" coveredmethods="57" elements="386" coveredelements="340" complexity="0" loc="230" ncloc="230" packages="3" files="16" classes="16"/>
     <package name="constants">
       <metrics statements="8" coveredstatements="8" conditionals="5" coveredconditionals="5" methods="1" coveredmethods="1"/>
       <file name="routes.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\constants\routes.js">
@@ -20,9 +20,9 @@
       </file>
     </package>
     <package name="containers">
-      <metrics statements="191" coveredstatements="173" conditionals="53" coveredconditionals="38" methods="55" coveredmethods="42"/>
+      <metrics statements="190" coveredstatements="172" conditionals="53" coveredconditionals="38" methods="54" coveredmethods="41"/>
       <file name="Bills.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\containers\Bills.js">
-        <metrics statements="27" coveredstatements="25" conditionals="6" coveredconditionals="4" methods="10" coveredmethods="10"/>
+        <metrics statements="26" coveredstatements="24" conditionals="6" coveredconditionals="4" methods="9" coveredmethods="9"/>
         <line num="7" count="18" type="stmt"/>
         <line num="8" count="18" type="stmt"/>
         <line num="9" count="18" type="stmt"/>
@@ -48,8 +48,7 @@
         <line num="45" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="55" count="18" type="stmt"/>
-        <line num="59" count="24" type="stmt"/>
-        <line num="61" count="6" type="stmt"/>
+        <line num="59" count="6" type="stmt"/>
       </file>
       <file name="Dashboard.js" path="C:\Users\GodFaz75\Desktop\OpenClassroom\livrable\Livrable_9\Billed\Billed-app-FR-Front\src\containers\Dashboard.js">
         <metrics statements="73" coveredstatements="70" conditionals="37" coveredconditionals="29" methods="24" coveredmethods="19"/>
